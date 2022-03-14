@@ -9,6 +9,8 @@ import {BrowserRouter as Router,
 import Home from './components/Home';
 import Menu from './components/Menu';
 import About from './components/About';
+import Order from './components/Order';
+import Admin from './components/admin';
 function App() {
   return (
     <Router>
@@ -27,6 +29,12 @@ function App() {
             <li>
               <NavLink to='About'>About</NavLink>
             </li>
+            <li >
+              <NavLink to='Order'>Order</NavLink>
+            </li>
+            <li >
+              <NavLink to='Admin'>Admin</NavLink>
+            </li>
           </ul>
         </nav>
         
@@ -34,6 +42,8 @@ function App() {
           <Route path='/Home'><Home/></Route>
           <Route path='/Menu'><Menu/></Route>
           <Route path='/About'><About/></Route>
+          <Route path='/Order'><Order/></Route>
+          <Route path='/Admin'><Admin/></Route>
         </div>
       </div>
     </Router>

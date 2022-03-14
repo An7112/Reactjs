@@ -1,22 +1,22 @@
 import React from "react";
-// import './Menu.css';
-import { MenuList } from "./MenuList";
-import MenuItem from "./MenuItem";
+import IndexMenu from "./IndexMenu";
+// import MenuList from "./MenuList"
 function Menu () {
     return (
         <div className="menu">
         <div className="menuList">
-          {MenuList.map((menuItem, key) => {
+          <IndexMenu/>
+          {/* {MenuList.map((menuItem, key) => {
             return (
               <MenuItem
                 key={key}
                 image={menuItem.image}
                 name={menuItem.name}
-                text={menuItem.text}
+                company={menuItem.company}
                 price={menuItem.price}
               />
             );
-          })}
+          })} */}
         </div>
       </div>
     )
