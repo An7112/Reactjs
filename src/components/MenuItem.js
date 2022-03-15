@@ -1,6 +1,5 @@
 import React from "react";
 import './Menu.css';
-import axios from 'axios';
 function MenuItem({ image, name, price, company }) {
   return (
     <div id="circle-shape-example">

@@ -11,6 +11,9 @@ let Products = new Schema({
     },
     price: {
         type: Number
+    },
+    author: {
+        type: String
     }
 }, {
     collection: 'products'

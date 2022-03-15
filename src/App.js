@@ -3,13 +3,12 @@ import './App.css';
 import React from 'react';
 import {BrowserRouter as Router,
   Route,
-  Link,
   NavLink
 } from "react-router-dom";
 import Home from './components/Home';
 import Menu from './components/Menu';
 import About from './components/About';
-import Order from './components/Order';
+import { Order } from './components/Order';
 import Admin from './components/admin';
 function App() {
   return (
@@ -21,16 +20,16 @@ function App() {
               <NavLink to='X'>X</NavLink>
             </li>
             <li >
-              <NavLink to='Home'>Home</NavLink>
+              <NavLink to='Home'>Trang chủ</NavLink>
             </li>
             <li>
-              <NavLink to='Menu'>Menu</NavLink>
+              <NavLink to='Menu'>Thực đơn</NavLink>
             </li>
             <li>
-              <NavLink to='About'>About</NavLink>
+              <NavLink to='About'>Về chúng tôi</NavLink>
             </li>
             <li >
-              <NavLink to='Order'>Order</NavLink>
+              <NavLink to='Order'>Đặt bàn</NavLink>
             </li>
             <li >
               <NavLink to='Admin'>Admin</NavLink>

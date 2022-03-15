@@ -15,11 +15,7 @@ body, html {
 
 
 .cards {
-    width: 30%;
-    float: left;
-    /* flex-direction: row;
-    display: flex; */
-    display: flex; 
+    width: 100%;
     display: -webkit-flex;
     justify-content: center;
     -webkit-justify-content: center;
@@ -27,31 +23,17 @@ body, html {
 }
 
 .card--1 .card__img, .card--1 .card__img--hover {
+    width: 100%;
     background-image: url('https://images.pexels.com/photos/45202/brownie-dessert-cake-sweet-45202.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
 }
 
-/* .card--2 .card__img, .card--2 .card__img--hover {
-    background-image: url('https://images.pexels.com/photos/307008/pexels-photo-307008.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
-} */
 
-.card__like {
-    width: 18px;
-}
 
-.card__clock {
-    width: 15px;
-    vertical-align: middle;
-    fill: #AD7D52;
-}
-.card__time {
-    font-size: 12px;
+.card__money {
+    font-size: 16px;
     color: #AD7D52;
     vertical-align: middle;
     margin-left: 5px;
-}
-
-.card__clock-info {
-    float: right;
 }
 
 .card__img {

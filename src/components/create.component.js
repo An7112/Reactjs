@@ -7,12 +7,14 @@ export default class Create extends Component {
         this.onChangeName = this.onChangeName.bind(this);
         this.onChangeIntroduce = this.onChangeIntroduce.bind(this);
         this.onChangePrice = this.onChangePrice.bind(this);
+        this.onChangeAuthor = this.onChangeAuthor.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
             name: '',
             introduce: '',
-            price:''
+            price:'',
+            author:''
         }
     }
 
@@ -33,6 +35,11 @@ export default class Create extends Component {
             price: e.target.value
         });
     }
+    onChangeAuthor(e) {
+        this.setState({
+            author: e.target.value
+        });
+    }
 
     onSubmit(e) {
         e.preventDefault();
@@ -40,7 +47,8 @@ export default class Create extends Component {
         const obj = {
             name: this.state.name,
             introduce: this.state.introduce,
-            price: this.state.price
+            price: this.state.price,
+            author: this.state.author
         };
         axios.post('http://localhost:4000/products/add', obj)
             .then(res => console.log(res.data));
@@ -48,7 +56,8 @@ export default class Create extends Component {
         this.setState({
             name: '',
             introduce: '',
-            price: ''
+            price: '',
+            author:''
         })
     }
 
@@ -73,6 +82,11 @@ export default class Create extends Component {
                         <label>Price: </label>
                         <input type="text" className="form-control" value={this.state.price}
                                onChange={this.onChangePrice}/>
+                    </div>
+                    <div className="form-group">
+                        <label>Author: </label>
+                        <input type="text" className="form-control" value={this.state.author}
+                               onChange={this.onChangeAuthor}/>
                     </div>
                     <div className="form-group">
                         <input type="submit" value="Register Product" className="btn btn-primary"/>

@@ -35,7 +35,9 @@ export default class Index extends Component {
                         <th>Name</th>
                         <th>Introduce</th>
                         <th>Price</th>
-                        <th colSpan="2">Action</th>
+                        <th>Author</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
                     </tr>
                     </thead>
                     <tbody>
