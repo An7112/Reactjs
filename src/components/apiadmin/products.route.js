@@ -43,7 +43,7 @@ productRoutes.route('/update/:id').post(function (req, res) {
             res.status(404).send("data is not found");
         else {
             console.log(product);
-            product.name = req.body.name;
+            product.name = req.body.name; //gửi đến webserver thông tin về các gói HTTP Request
             product.introduce = req.body.introduce;
             product.price = req.body.price;
             product.author = req.body.author;
