@@ -1,0 +1,12 @@
+h1{
+    color: black;
+
+}
+
+h1:hover{
+    color: red;
+}
+
+p{
+    font-weight: 700;
+}

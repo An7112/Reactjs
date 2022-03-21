@@ -1,5 +1,26 @@
-
 .Name {
     height: 30%;
     width: 90%;
+}
+.homes{
+    height: 900px;
+    width: 100%;
+    Background-size: cover;
+}
+.form-group{
+    border-radius: 8px;
+    padding: 0 auto;
+    margin: 0;
+}
+.text-gray-500{
+    color: black;
+}
+
+.form-control{
+    height: auto;
+    width: 90%;
+    
+}
+.home{
+    margin: 0;
 }

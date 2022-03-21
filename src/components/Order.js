@@ -1,11 +1,9 @@
-
-
 import React,{  useEffect, useState} from "react";
 import './Order.css';
 import emailjs from '@emailjs/browser';
 import TextareaField from "./TextareaField";
 import InputField from "./InputField";
-// import OrderImage from '../img/banner.jpg';
+
 export const Order = () => {
 const [values, setValues] = useState({
     fullName: '',
@@ -49,26 +47,31 @@ const [values, setValues] = useState({
     }))
   }
         return (
+          <div className="homes" >
           <div className="home" >
-            <div className="form-group" style={{width:'30%', marginLeft:'35%', color:'rgb(133, 166, 194)'}}>
+
+            <div className="form-group" style={{background:"white" , width:'30%', marginLeft:'35%', color:'rgb(133, 166, 194)'}}>
             {status && renderAlert()}
             <form onSubmit={handleSubmit}>
-            <InputField value={values.fullName} handleChange={handleChange} label="Tên đầy đủ" name="fullName" type="text" placeholder="Nguyen Thanh An" />
+            <InputField value={values.fullName} handleChange={handleChange} label="Họ và tên:" name="fullName" type="text"/>
             <br></br>
-            <InputField value={values.email} handleChange={handleChange} label="E-Mail" name="email" type="email" placeholder="thanhan7112@gmail.com" />
+            <InputField value={values.email} handleChange={handleChange} label="E-Mail:" name="email" type="email" />
             <br></br>
-            <InputField value={values.numberP} handleChange={handleChange} label="Số người" name="numberP" type="text" placeholder="ex: 5"/>
+            <InputField value={values.numberP} handleChange={handleChange} label="Số người tham dự:" name="numberP" type="text"/>
             <br></br>
-            <InputField value={values.phoneNumber} handleChange={handleChange} label="Số điện thoại" name="phoneNumber"  type="text" placeholder="ex: 0364776328" />
+            <InputField value={values.phoneNumber} handleChange={handleChange} label="Số điện thoại:" name="phoneNumber"  type="text" />
             <br></br>
-            <TextareaField value={values.message} handleChange={handleChange} label="Lưu ý cho nhà hàng" name="message" placeholder="ex: abc" />
+            <TextareaField value={values.message} handleChange={handleChange} label="Lưu ý cho nhà hàng:" name="message" />
             <br></br>
             <div className="form-group">
               <input type="submit" value="Send" className="btn btn-primary"/>
           </div>
             </form>
           </div>
+           
           </div>
+          </div>
+          
         )
       }
       
@@ -77,4 +80,3 @@ const [values, setValues] = useState({
           <p>your message submitted successfully</p>
         </div>
       )
-    

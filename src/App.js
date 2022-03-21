@@ -11,26 +11,30 @@ import About from './components/About';
 import { Order } from './components/Order';
 // import { Login } from 'heroicons-react';
 import Login from './components/login';
+import { IoLogInOutline } from "react-icons/io5";
+
 function App() {
   return (
     <Router>
+      
       <div>
         <nav>
           <ul className="header">
-            <li >
+            <li style={{float:'left'}}>
+              <NavLink to='Login'><IoLogInOutline style={{width:'50px', height:'30px'}} /></NavLink>
+            </li>
+            <li style={{marginLeft:'-5%'}}>
               <NavLink to='/Home'>Trang chủ</NavLink>
             </li>
             <li>
               <NavLink to='Menu'>Thực đơn</NavLink>
             </li>
-            <li>
-              <NavLink to='About'>Về chúng tôi</NavLink>
-            </li>
+            
             <li >
               <NavLink to='Order'>Đặt bàn</NavLink>
             </li>
-            <li >
-              <NavLink to='Login'>Đăng nhập</NavLink>
+            <li>
+              <NavLink to='About'>Về chúng tôi</NavLink>
             </li>
           </ul>
         </nav>
